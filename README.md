@@ -1,6 +1,10 @@
 # COMS_API
 Documenting the COMS Service API using swagger
 
+Setting up Continuous Integration on Windows - 
+https://jhipster.github.io/setting_up_ci_windows.html
+
+
 https://www.npmjs.com/package/grunt-eslint
 https://www.npmjs.com/package/eslint-html-reporter
 https://www.npmjs.com/package/eslint-config-defaults

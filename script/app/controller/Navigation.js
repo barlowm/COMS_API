@@ -18,7 +18,7 @@ Ext.define('COMS.controller.Navigation', {
 
 	// For this controller the following is mostly for debugging
 	// It should be removed prior to releasing to production
-	init: fun---ction () {
+	init: function () {
 		wccConsoleLog('Initialized Navigation Controller!');
 		this.control({
 			'NavigationTabs': {

@@ -1,0 +1,23 @@
+{
+  "name": "COMS_API",
+  "version": "1.0.0",
+  "description": "Build file for all the Javascript code in the COMS application",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barlowm/COMS_API.git"
+  },
+  "author": "mike barlow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barlowm/COMS_API/issues"
+  },
+  "homepage": "https://github.com/barlowm/COMS_API",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "eslint": "*",
+    "eslint-config-defaults": "*",
+    "eslint-html-reporter": "*",
+    "grunt-eslint": "*"
+  }
+}

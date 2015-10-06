@@ -1,0 +1,16 @@
+GIT_COMMAND_LOG.log 
+
+*.bak
+*.db
+*.log
+*.NOT_NEEDED
+
+./app/**/app-old.js
+./jshint.*.txt
+
+./app/js_Files2Ignore/*
+./build/* 
+./_Temp/*
+./node_modules/*
+./reports/*
+./Backup/*

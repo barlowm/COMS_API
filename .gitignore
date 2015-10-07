@@ -8,9 +8,12 @@ GIT_COMMAND_LOG.log
 ./app/**/app-old.js
 ./jshint.*.txt
 
-./app/js_Files2Ignore/*
+
 ./build/* 
 ./_Temp/*
-./node_modules/*
-./reports/*
-./Backup/*
+
+
+/node_modules
+/reports
+/Backup
+/FULL.eslintrc_FULL

@@ -121,7 +121,7 @@ Ext.define("COMS.view.Orders.OrdersTab", {
 		format:"0.00",
 		renderer: function(v) {
 			var fltValue = parseFloat(v);
-			var intValue = parseInt(v);
+			var intValue = parseInt(v, 10);
 			if (intValue == Number.NaN) {
 				return("");
 			}

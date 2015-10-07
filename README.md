@@ -5,6 +5,13 @@ Setting up Continuous Integration on Windows -
 https://jhipster.github.io/setting_up_ci_windows.html
 
 
+Getting started with Grunt
+http://gruntjs.com/getting-started
+
+How to automate with "watch" and grunt
+http://www.thegeekstuff.com/2014/10/grunt-contrib-watch-automate/
+
+
 https://www.npmjs.com/package/grunt-eslint
 https://www.npmjs.com/package/eslint-html-reporter
 https://www.npmjs.com/package/eslint-config-defaults

@@ -65,17 +65,17 @@ Ext.define("COMS.view.OEM.OEM_Level1", {
 					// debugger;
 				},
 				goalLink : function ( current ) {
-					return (current.Goal || "No Goal Specified - <button name=\"AddGoal\" class=\"anchor\">Add Goal</button>");
+					return current.Goal || "No Goal Specified - <button name=\"AddGoal\" class=\"anchor\">Add Goal</button>";
 				},
 				ctLink : function ( current ) {
-					return (current.ClinicalTrial || "Clinical Trial Not Specified - <button name=\"AddClinicalTrial\" class=\"anchor\">Add Clinical Trial</button>");
+					return current.ClinicalTrial || "Clinical Trial Not Specified - <button name=\"AddClinicalTrial\" class=\"anchor\">Add Clinical Trial</button>";
 				},
 				ctData : function ( current ) {
 					return "";
 				},
 				PS : function ( current ) {
 					var buf = current.PerformanceStatus + " <button name=\"EditPerformanceStatus\" class=\"anchor EditPerformanceStatus\">Change Performance Status</button>";
-					return (buf);
+					return buf;
 				}
 
 			}
@@ -409,21 +409,21 @@ Ext.define("COMS.view.OEM.dspOEMTemplateData" ,{
 							"name=\"dspOEMDoseCalcs\" " + 
 							"title=\"Show Dosage Calculation\">" + dspCalcDose + "</button>";
 					}
-					return (ret);
+					return ret;
 				},
 
 
 				hasData: function (instr) {
-					return ("" !== instr);
+					return "" !== instr;
 				},
 				hasNOData: function (instr) {
-					return ("" === instr);
+					return "" === instr;
 				},
 				hasDrug : function (therapy) {
 					if (therapy) {
-						return (null !== therapy[0].Med);
+						return null !== therapy[0].Med;
 					}
-					return (false);
+					return false;
 				},
 
 				SaveIdx : function (xindex, Cycle, Day, values, parent) {
@@ -442,32 +442,12 @@ Ext.define("COMS.view.OEM.dspOEMTemplateData" ,{
 					var lineNo = 0;
 					var a2, flg = true;
 					a2 = FluidType;		// + FluidVol + FlowRate;
-					flg = ("" !== a2.trim());
+					flg = "" !== a2.trim();
 					return flg;
-/*******************
-					try {
-						if ("" === AdminMethod) {
-							return false;
-						}
-						if ("IV" !== AdminMethod.substr(0,2)) {
-							return false;
-						}
-						a2 = FluidType + FluidVol + FlowRate;
-						try {
-							flg = ("" !== a2.trim());							
-						}
-						catch (e) {
-						}
-						return( flg );
-					}
-					catch (err) {
-						return( false );
-					}
- *******************/
 				},
 
 				CalcInfusionTime : function (vol, rate) {
-					return (Ext.CalcInfusionTime(vol, rate, true));
+					return Ext.CalcInfusionTime(vol, rate, true);
 				},
 
 				CalcStyle : function ( current ) {
@@ -478,7 +458,7 @@ Ext.define("COMS.view.OEM.dspOEMTemplateData" ,{
 				},
 
 				CalcName : function ( current ) {
-					return ("Cycle_" + current.Cycle + "_Day_" + current.Day);
+					return "Cycle_" + current.Cycle + "_Day_" + current.Day;
 				},
 				CalcAnchor : function ( type, idx, current, parent ) {
 					// Anchor onClick handler located in the OEM.js controller
@@ -549,7 +529,7 @@ Ext.define("COMS.view.OEM.dspOEMTemplateData" ,{
                     today.setHours(0, 0, 0, 0);
 					var aDate = new Date(AdminDate);
 					if (aDate < today) {
-						return ("");	// No Edit link if the Admin Date is before today
+						return "";	// No Edit link if the Admin Date is before today
 					}
 					var buf = "AdminDate=\"" + AdminDate + "\"";
 					return " - <button class=\"anchor ChangeOEM_AdminDate\" " + buf + ">Change Admin Date</button>";

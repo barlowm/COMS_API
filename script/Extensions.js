@@ -272,12 +272,7 @@ Ext.ShowUnitPerWeightCalcs = function (PatientInfo, saveCalc, Dose, calcDose, or
 		origDose: origDose,
 		units : units
 	});
-/**
-	var AdditionalPossibleXTemplateInfo =
-		"<tr><th>BSA Weight <br>({WeightFormula})</th><td>{BSA_Weight} kg</td></tr>",
-		"<tr><th>Height:</th><td>{Height} in {[this.HeightInCM(values)]}</td></tr>",
-		"<tr><th>Weight</th><td>{Weight} lbs {[this.WeightInKG(values)]}</td></tr>";
- **/
+
 	var html = new Ext.XTemplate(
 		"<table class=\"InformationTable\" border=\"1\">",
 		"<tr><th>Actual Weight: </th><td>{Weight} lbs{[this.WeightInKG(values)]}</td></tr>",

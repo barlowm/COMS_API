@@ -2131,7 +2131,7 @@ Ext.define("COMS.controller.NewPlan.NewPlanTab", {
 		var x = "";
 		switch (eLevel1) {
 			case "Minimal" :
-			case "Low":
+			//case "Low":
 				x = "Emesis-1";
 				break;
 
@@ -2141,12 +2141,12 @@ Ext.define("COMS.controller.NewPlan.NewPlanTab", {
 				break;
 
 			case "Moderate" :
-			case "Moderate":
+			//case "Moderate":
 				x = "Emesis-3";
 				break;
 
 			case "High" :
-			case "High":
+			//case "High":
 				x = "Emesis-4";
 				break;
 			case "Very":

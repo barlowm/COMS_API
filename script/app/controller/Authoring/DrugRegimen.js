@@ -526,7 +526,12 @@ Ext.define("COMS.controller.Authoring.DrugRegimen", {
 					theStore.insert(i, currRecord);
 				}
 				theStore.removeAt(theIndex);
-				return;
+				return {
+					hasRecord: false,
+					selModel: null,
+					record: null,
+					rowNum: 0
+				}
 			}
 		}
 		return {

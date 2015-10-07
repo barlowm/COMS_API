@@ -771,10 +771,10 @@ ClearTabData : function(obj) {
 		var rgEduAssess = Ext.ComponentQuery.query("NursingDocs_PatientTeaching [name=\"rgEduAssess\"]")[0].getValue();
 		var rgPlanReviewed = Ext.ComponentQuery.query("NursingDocs_PatientTeaching [name=\"rgPlanReviewed\"]")[0].getValue();
 
-		var flg1 = null === rgPatientID.patientIDGood || undefined === rgPatientID.patientIDGood;
-		var flg2 = null === rgConsent.consentGood || undefined === rgConsent.consentGood;
-		var flg3 = null === rgEduAssess.educationGood || undefined === rgEduAssess.educationGood;
-		var flg4 = null === rgPlanReviewed.planReviewed || undefined === rgPlanReviewed.planReviewed;
+		var flg1 = null === rgPatientID.patientIDGood || "undefined" === typeof rgPatientID.patientIDGood;
+		var flg2 = null === rgConsent.consentGood || "undefined" === typeof rgConsent.consentGood;
+		var flg3 = null === rgEduAssess.educationGood || "undefined" === typeof rgEduAssess.educationGood;
+		var flg4 = null === rgPlanReviewed.planReviewed || "undefined" === typeof rgPlanReviewed.planReviewed;
 		var flg5 = "" === PatientIDComment;
 
 		if (flg1 && flg2 && flg3 && flg4 && flg5) {

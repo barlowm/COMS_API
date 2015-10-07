@@ -11,7 +11,14 @@
  * npm install grunt-phplint
  * Ensure PHP is in the path
  */
+var mode = "Dev";
+// mode = "Prod";
+
 module.exports = function(grunt) {
+    var eslint_config = ".eslintrc";
+    if ("Dev" === mode) {
+        eslint_config = "Warning.eslintrc";
+    }
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         src: {
@@ -31,9 +38,11 @@ module.exports = function(grunt) {
             ]
         },
 
+            /* http://eslint.org/ */
         eslint: {
             target: ['<%= src.files %>'],
             options: {
+                config : eslint_config,
                 format: require("eslint-html-reporter"),
                 outputFile: "./reports/output/eslint-output.html"
             }
